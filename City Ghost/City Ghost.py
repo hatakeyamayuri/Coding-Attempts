@@ -1,7 +1,8 @@
 #multiplayer on one device or online?
 #like Super Smash Bros?
-
 #or incorperate slimes (already downloaded)
+
+#Look at the paper for more info
 
 import pygame
 pygame.init()
@@ -65,7 +66,7 @@ def redraw(window):
     Urban.draw(window)
     for shot in shoot:
         shot.draw(window)
-        pygame.time.wait(100)
+        #pygame.time.wait(10)
     
     pygame.display.update()    
     
@@ -93,7 +94,8 @@ while run:
             facing = -1
         else: 
             facing = 1
-        shoot.append(projectile(Urban.x + Urban.width //2, Urban.y + Urban.height //2 - 15, facing))
+        if len(shoot) < 10:
+            shoot.append(projectile(Urban.x + Urban.width //2 - 26, Urban.y + Urban.height //2 - 15, facing))
                      
     elif keys[pygame.K_LEFT] and Urban.x > Urban.vel:
         Urban.x -= Urban.vel
