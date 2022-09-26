@@ -1,9 +1,3 @@
-#multiplayer on one device or online?
-#like Super Smash Bros?
-#or incorperate slimes (already downloaded)
-
-#Look at the paper for more info
-
 import time
 import pygame
 pygame.init()
